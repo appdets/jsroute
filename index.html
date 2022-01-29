@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Router</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body>
+    <div class="p-6">
+       <header class="flex items-center justify-between">
+            <h2 class="text-2xl font-medium">Vanilla Router</h2>
+
+            <div class="flex items-center gap-4 justify-center text-gray-500 text-base">
+                <a class="hover:text-gray-700" href="#">Welcome</a>
+                <a class="hover:text-gray-700" href="#get-started">Get Started</a>
+                <a class="hover:text-gray-700" href="#profile">Profile page</a>
+                <a class="hover:text-gray-700" href="#another">Error page</a>
+            </div>
+       </header>
+
+        <!-- contents  -->
+        <article class="my-6 text-gray-600 prose prose-2xl mx-auto">
+            <div data-content="/">
+               
+                <p>
+                    <strong>Welcome to Vanilla Router!</strong><br/>
+                    Vanilla Router is a simple web router kit developed with Vanilla JavaScript only. Basically, it's developed targeting WordPress admin panel screen for Plugins/Themes developer. Unlike React or Vue router, Vanilla Router works with existing DOM. No need to have components in Virtual DOM.
+                </p>
+            </div>
+            <div data-content="get-started">
+                <p>
+                    <div>Install using NPM</div>
+                    <code>npm i vanillarouter</code>
+                </p>
+            </div>
+            <div data-content="profile">
+                This is profile page
+            </div>
+            <div data-content="fallback">
+                Error 404
+            </div>
+        </article>
+    </div>
+
+    <script src="dist/router.min.js"> </script> 
+    <script>
+        const routes = {
+            "/": {
+                title: "Welcome to Vanilla Router",
+            },
+            // "/get-started": {
+            //     title: "Get Started with Vanilla Router",
+            // },
+            "/profile": {
+                title: "Profile Page",
+            },
+            // "/[a-z]": {
+            //     title: "Error 404",
+            //     selector: "[data-content='fallback']"
+            // },
+        }
+
+        Router.use(routes).init();
+        Router.route('get-started')
+
+        // setTimeout(() => {
+        //     console.log("Change route to home after 3 seconds");
+        //     Router.route('')
+        // }, 3000)
+    </script>
+</body>
+
+</html>
