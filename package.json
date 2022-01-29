@@ -1,5 +1,5 @@
 {
-  "name": "vanillarouter",
+  "name": "jsroute",
   "version": "1.0.0",
   "description": "A Lightweight, Tiny and Simple Web Router developed in Vanilla JavaScript",
   "main": "index.js",
@@ -16,10 +16,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/appdets/vanillarouter.git"
+    "url": "git+https://github.com/appdets/jsroute.git"
   },
   "bugs": {
-    "url": "https://github.com/appdets/vanillarouter/issues"
+    "url": "https://github.com/appdets/jsroute/issues"
   },
-  "homepage": "https://github.com/appdets/vanillarouter#readme"
+  "homepage": "https://github.com/appdets/jsroute#readme"
 }
