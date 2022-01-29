@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSRoute</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body>
+    <div class="p-6">
+       <header class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-gray-100">
+            <a href="#" class="text-2xl font-medium">JSRoute</a>
+
+            <div class="flex items-center gap-4 justify-center text-gray-500 text-base">
+                <a class="hover:text-gray-700" href="#">Welcome</a>
+                <a class="hover:text-gray-700" href="#documentation">Documentation</a>
+                <a class="hover:text-gray-700" href="#typography">Typo</a>
+                <a class="hover:text-gray-700" href="#not-found">Error</a>
+            </div>
+       </header>
+
+        <!-- contents  -->
+        <article class="my-6 text-gray-600 prose prose-2xl mx-auto">
+            <div data-content="/">
+               
+                <p> 
+                    JSRoute is a the tiniest, lightweight, and simplest Hash Router made with Pure Vanilla JavaScript. Unlike React or Vue,
+                    JSRoute can work with existing DOM without any component. You can customize the router for your own demand.
+                </p>
+                <p>So don't worry about routing your screens logically.</p>
+
+                <a href="#documentation" class="bg-slate-700 hover:bg-slate-800 transition duration-150 text-white px-4 py-2 rounded-sm no-underline">Get Started</a>
+            </div>
+            <div data-content="documentation">
+                 
+         
+                <p>
+                    HTML
+<pre>&lt;div&gt;
+    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;
+    &lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;
+    &lt;a href=&quot;#another&quot;&gt;Another&lt;/a&gt;
+&lt;/div&gt;
+&lt;div data-content=&quot;/&quot;&gt;Home page&lt;/div&gt;
+&lt;div data-content=&quot;about&quot;&gt;About page&lt;/div&gt;
+&lt;div data-content=&quot;contact&quot;&gt;Contact us page&lt;/div&gt;
+&lt;div data-content=&quot;fallback&quot;&gt;Error 404&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/jsroute/jsroute.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+                </p>
+                       <p>
+                           JavaScript
+                           <pre>const Router = window.jsroute
+Router.init()
+</pre>
+                       </p>
+                <p> 
+                    Follow the full <a href="//github.com/appdets/jsroute" target="_blank">documentation</a> in GIT
+                </p> 
+                <p>
+                    <a href="//github.com/appdets/jsroute" target="_blank"
+                        class="bg-slate-700 hover:bg-slate-800 transition duration-150 text-white px-4 py-2 rounded-sm no-underline">Documentation</a>
+                </p>
+            </div>
+            <div data-content="typography">
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus minus ducimus dolore eos molestiae recusandae? Voluptate dolorem consequuntur vel. Doloribus voluptas deleniti corrupti molestias ratione temporibus enim laboriosam eos expedita.
+               </p> 
+               <p>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, rem tempore error modi, iure ea id molestiae odit tenetur, amet inventore impedit necessitatibus. Reprehenderit officia nisi itaque corrupti inventore molestiae ut magnam aliquid hic beatae voluptatem, placeat eligendi rem tenetur repellat ipsa ex excepturi iure maxime tempore fugit est harum.
+               </p>
+            </div>
+            <div data-content="fallback">
+
+                <div class="text-center mt-4">
+                    The page you are looking for does not exist
+                </div>
+
+                <div class="mx-auto max-w-md">
+                    <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_tonsVH.json"
+                        background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay>
+                    </lottie-player>
+                </div>
+
+            </div>
+        </article>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="jsroute.min.js"> </script> 
+    <script>
+        const states = {
+            routes: {
+                "/": {
+                title: "Welcome to Vanilla Router",
+                },
+                "/typography": {
+                title: "Typography Page",
+                },
+            },
+        }
+
+        JSRoute.debug().use(states).init();
+        
+    </script>
+</body>
+
+</html>

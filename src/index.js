@@ -1,3 +1,3 @@
-import Router from "./Router";
-window.Router = Router;
-export default Router;
+import JSRoute from "./JSRoute";
+window.JSRoute = JSRoute;
+export default JSRoute;

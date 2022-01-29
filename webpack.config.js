@@ -4,7 +4,7 @@ module.exports = {
   entry: "./src/index.js",
   mode: "production",
   output: {
-    filename: "router.min.js",
-    path: path.resolve(__dirname, "./dist/"),
-  },
+    filename: "jsroute.min.js",
+    path: path.resolve(__dirname, "./"),
+  }, 
 };
